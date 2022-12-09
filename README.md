@@ -7,8 +7,8 @@ It is planned to collect 100 Sinhala songs and there can be more than 100 metaph
 * Album
 * Year
 * Metaphors
-        * Type of Metaphor
-        * Source Domain
-        * Target Domain
-        * Interpretation
+       * Type of Metaphor
+       * Source Domain
+       * Target Domain
+       * Interpretation
 The main objective of this project is that providing highly relevant metaphors for the users according to the searching keywords or phrases.
