@@ -1,0 +1,35 @@
+<div *ngFor="let metaphor of result._source.metaphors;let i=index">
+<div *ngIf = "result._source.metaphors.length>0 && i>0">
+<span>&nbsp;</span>
+</div>
+<div (click)="clicked()">
+    
+    <div *ngIf="!isClicked">
+        
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>
+                    {{metaphor.metaphor}}
+                </mat-card-title>
+            </mat-card-header>
+        </mat-card>
+    </div>
+    <div *ngIf="isClicked" style="white-space: pre-line;">
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>
+                    {{metaphor.metaphor}}
+                </mat-card-title>
+                <mat-card-subtitle>Singers - {{result._source.singers}}</mat-card-subtitle>
+                <mat-card-subtitle>Lyrics - {{result._source.lyrics}}</mat-card-subtitle>
+                <mat-card-subtitle>Music - {{result._source.composer}}</mat-card-subtitle>
+                <mat-card-subtitle>Lyricist - {{result._source.lyricist}}</mat-card-subtitle>
+                <mat-card-subtitle>Year - {{result._source.year}}</mat-card-subtitle>
+                <mat-card-subtitle>Source Domain - {{metaphor.source_domain}}</mat-card-subtitle>
+                <mat-card-subtitle>Target Domain - {{metaphor.target_domain}}</mat-card-subtitle>
+                <mat-card-subtitle>Interpretation - {{metaphor.interpretation}}</mat-card-subtitle>
+            </mat-card-header>
+        </mat-card>
+    </div>
+</div>
+</div>
